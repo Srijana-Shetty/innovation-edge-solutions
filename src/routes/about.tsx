@@ -30,10 +30,22 @@ export const Route = createFileRoute("/about")({
 });
 
 const values = [
-  { title: "Quality", text: "Careful selection of books, products and materials." },
-  { title: "Integrity", text: "Straightforward, dependable dealings with every customer." },
-  { title: "Learning First", text: "Decisions guided by educational value." },
-  { title: "Service", text: "Responsive support for schools and institutions." },
+  {
+    title: "Quality",
+    text: "Careful selection of books, products and materials.",
+  },
+  {
+    title: "Integrity",
+    text: "Straightforward, dependable dealings with every customer.",
+  },
+  {
+    title: "Learning First",
+    text: "Decisions guided by educational value.",
+  },
+  {
+    title: "Service",
+    text: "Responsive support for schools and institutions.",
+  },
 ];
 
 const serve = [
@@ -69,31 +81,69 @@ function About() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <p className="mt-3 text-xs text-muted-foreground">
-              Image placeholder — to be replaced with Innovation Edge&apos;s own photographs
-              (office, store, team or events).
-            </p>
           </Reveal>
+
           <div>
             <SectionHeading
               align="left"
               eyebrow="Introduction"
               title="Our Story"
-              subtitle="Content placeholder — Innovation Edge's company story will be added here once provided. The section is written to be easily replaced with the confirmed history and background."
+              subtitle="Innovation Edge was built with a simple vision — to make quality education resources more accessible and help create better learning experiences."
             />
+
+            <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground">
+              <p>
+                Innovation Edge is an education-focused company providing a
+                wide range of resources and solutions that support students,
+                educators, schools, institutions and organizations.
+              </p>
+
+              <p>
+                From academic and story books to activity resources, STEAM
+                materials, competitive books, school supplies, office
+                supplies and stationery, we aim to bring essential educational
+                resources together in one place.
+              </p>
+
+              <p>
+                Our offerings also extend to printing, Xerox services, book
+                fairs, school exhibitions and library setup solutions, helping
+                create better learning environments and supporting educational
+                institutions with practical and reliable resources.
+              </p>
+
+              <p>
+                With a focus on quality, service and educational value,
+                Innovation Edge aims to connect people with the resources they
+                need to learn, grow and succeed.
+              </p>
+            </div>
+
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
-              <Reveal className="rounded-xl border border-border bg-card p-6 shadow-card">
-                <h3 className="text-base font-bold text-primary">Our Mission</h3>
+              <Reveal
+                className="rounded-xl border border-border bg-card p-6 shadow-card"
+              >
+                <h3 className="text-base font-bold text-primary">
+                  Our Mission
+                </h3>
+
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  To make quality educational resources, products and services easily
-                  accessible to learners and institutions.
+                  To make quality educational resources, products and services
+                  easily accessible to learners and institutions.
                 </p>
               </Reveal>
-              <Reveal delay={80} className="rounded-xl border border-border bg-card p-6 shadow-card">
-                <h3 className="text-base font-bold text-primary">Our Vision</h3>
+
+              <Reveal
+                delay={80}
+                className="rounded-xl border border-border bg-card p-6 shadow-card"
+              >
+                <h3 className="text-base font-bold text-primary">
+                  Our Vision
+                </h3>
+
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  To be a trusted education solutions partner that helps learning environments
-                  grow and improve.
+                  To be a trusted education solutions partner that helps
+                  learning environments grow, improve and inspire.
                 </p>
               </Reveal>
             </div>
@@ -103,14 +153,26 @@ function About() {
 
       <section className="bg-surface py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Our Values" title="What Guides Our Work" />
+          <SectionHeading
+            eyebrow="Our Values"
+            title="What Guides Our Work"
+          />
+
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v, i) => (
               <Reveal key={v.title} delay={i * 70}>
                 <div className="h-full rounded-xl border border-border bg-card p-7 shadow-card">
-                  <span className="text-sm font-bold text-accent">0{i + 1}</span>
-                  <h3 className="mt-3 text-base font-bold text-primary">{v.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.text}</p>
+                  <span className="text-sm font-bold text-accent">
+                    0{i + 1}
+                  </span>
+
+                  <h3 className="mt-3 text-base font-bold text-primary">
+                    {v.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {v.text}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -125,6 +187,7 @@ function About() {
             title="Who We Serve"
             subtitle="Innovation Edge works with learners and the institutions that support them."
           />
+
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {serve.map((item, i) => (
               <Reveal key={item.label} delay={i * 50}>
@@ -132,11 +195,15 @@ function About() {
                   <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-soft text-primary">
                     <item.icon className="h-5 w-5" />
                   </span>
-                  <span className="min-w-0 text-sm font-semibold text-primary">{item.label}</span>
+
+                  <span className="min-w-0 text-sm font-semibold text-primary">
+                    {item.label}
+                  </span>
                 </div>
               </Reveal>
             ))}
           </div>
+
           <Reveal className="mt-12 text-center">
             <CtaLink to="/contact">Talk to Our Team</CtaLink>
           </Reveal>
