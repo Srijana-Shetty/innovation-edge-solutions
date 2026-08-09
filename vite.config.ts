@@ -14,7 +14,7 @@ export default defineConfig({
   vite: {
     server: {
       host: "0.0.0.0",
-      allowedHosts: ["innovation-edge-solutions-2.onrender.com"],
+      allowedHosts: true,
     },
   },
 });
