@@ -10,33 +10,102 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BookFairsRouteImport } from './routes/book-fairs'
+import { Route as ProductsRouteImport } from './routes/products'
+import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as WhatWeOfferRouteImport } from './routes/what-we-offer'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookFairsRoute = BookFairsRouteImport.update({
+  id: '/book-fairs',
+  path: '/book-fairs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsRoute = SolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatWeOfferRoute = WhatWeOfferRouteImport.update({
+  id: '/what-we-offer',
+  path: '/what-we-offer',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-fairs': typeof BookFairsRoute
+  '/products': typeof ProductsRoute
+  '/solutions': typeof SolutionsRoute
+  '/what-we-offer': typeof WhatWeOfferRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-fairs': typeof BookFairsRoute
+  '/products': typeof ProductsRoute
+  '/solutions': typeof SolutionsRoute
+  '/what-we-offer': typeof WhatWeOfferRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-fairs': typeof BookFairsRoute
+  '/products': typeof ProductsRoute
+  '/solutions': typeof SolutionsRoute
+  '/what-we-offer': typeof WhatWeOfferRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/book-fairs'
+    | '/products'
+    | '/solutions'
+    | '/what-we-offer'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/book-fairs'
+    | '/products'
+    | '/solutions'
+    | '/what-we-offer'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/book-fairs'
+    | '/products'
+    | '/solutions'
+    | '/what-we-offer'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BookFairsRoute: typeof BookFairsRoute
+  ProductsRoute: typeof ProductsRoute
+  SolutionsRoute: typeof SolutionsRoute
+  WhatWeOfferRoute: typeof WhatWeOfferRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +117,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-fairs': {
+      id: '/book-fairs'
+      path: '/book-fairs'
+      fullPath: '/book-fairs'
+      preLoaderRoute: typeof BookFairsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions': {
+      id: '/solutions'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/what-we-offer': {
+      id: '/what-we-offer'
+      path: '/what-we-offer'
+      fullPath: '/what-we-offer'
+      preLoaderRoute: typeof WhatWeOfferRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BookFairsRoute: BookFairsRoute,
+  ProductsRoute: ProductsRoute,
+  SolutionsRoute: SolutionsRoute,
+  WhatWeOfferRoute: WhatWeOfferRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
