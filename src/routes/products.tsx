@@ -84,7 +84,7 @@ function Products() {
       <PageHero
         eyebrow="Products"
         title="Our Product Categories"
-        description="A catalogue-style overview of the product categories Innovation Edge supplies. Detailed product listings can be added as product information is confirmed."
+        description="A catalogue-style overview of the product categories Innovation Edge supplies. "
         image={IMAGES.schoolSupplies}
         imageAlt="School supplies on retail shelves"
       />
@@ -94,7 +94,7 @@ function Products() {
           <SectionHeading
             eyebrow="Catalogue"
             title="Browse by Category"
-            subtitle="Product names, specifications and pricing will be published once confirmed by Innovation Edge."
+           // subtitle="Product names, specifications and pricing will be published once confirmed by Innovation Edge."
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {categories.map((cat, i) => (
