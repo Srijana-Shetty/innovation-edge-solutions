@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BookFairsRouteImport } from './routes/book-fairs'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as LibrarySetupRouteImport } from './routes/library-setup'
+import { Route as ProductsRouteImport } from './routes/products'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as WhatWeOfferRouteImport } from './routes/what-we-offer'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookFairsRoute = BookFairsRouteImport.update({
+  id: '/book-fairs',
+  path: '/book-fairs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibrarySetupRoute = LibrarySetupRouteImport.update({
+  id: '/library-setup',
+  path: '/library-setup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsRoute = SolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatWeOfferRoute = WhatWeOfferRouteImport.update({
+  id: '/what-we-offer',
+  path: '/what-we-offer',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-fairs': typeof BookFairsRoute
+  '/contact': typeof ContactRoute
+  '/library-setup': typeof LibrarySetupRoute
+  '/products': typeof ProductsRoute
+  '/services': typeof ServicesRoute
+  '/solutions': typeof SolutionsRoute
+  '/what-we-offer': typeof WhatWeOfferRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-fairs': typeof BookFairsRoute
+  '/contact': typeof ContactRoute
+  '/library-setup': typeof LibrarySetupRoute
+  '/products': typeof ProductsRoute
+  '/services': typeof ServicesRoute
+  '/solutions': typeof SolutionsRoute
+  '/what-we-offer': typeof WhatWeOfferRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-fairs': typeof BookFairsRoute
+  '/contact': typeof ContactRoute
+  '/library-setup': typeof LibrarySetupRoute
+  '/products': typeof ProductsRoute
+  '/services': typeof ServicesRoute
+  '/solutions': typeof SolutionsRoute
+  '/what-we-offer': typeof WhatWeOfferRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/book-fairs'
+    | '/contact'
+    | '/library-setup'
+    | '/products'
+    | '/services'
+    | '/solutions'
+    | '/what-we-offer'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/book-fairs'
+    | '/contact'
+    | '/library-setup'
+    | '/products'
+    | '/services'
+    | '/solutions'
+    | '/what-we-offer'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/book-fairs'
+    | '/contact'
+    | '/library-setup'
+    | '/products'
+    | '/services'
+    | '/solutions'
+    | '/what-we-offer'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BookFairsRoute: typeof BookFairsRoute
+  ContactRoute: typeof ContactRoute
+  LibrarySetupRoute: typeof LibrarySetupRoute
+  ProductsRoute: typeof ProductsRoute
+  ServicesRoute: typeof ServicesRoute
+  SolutionsRoute: typeof SolutionsRoute
+  WhatWeOfferRoute: typeof WhatWeOfferRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +156,76 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-fairs': {
+      id: '/book-fairs'
+      path: '/book-fairs'
+      fullPath: '/book-fairs'
+      preLoaderRoute: typeof BookFairsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/library-setup': {
+      id: '/library-setup'
+      path: '/library-setup'
+      fullPath: '/library-setup'
+      preLoaderRoute: typeof LibrarySetupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions': {
+      id: '/solutions'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/what-we-offer': {
+      id: '/what-we-offer'
+      path: '/what-we-offer'
+      fullPath: '/what-we-offer'
+      preLoaderRoute: typeof WhatWeOfferRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BookFairsRoute: BookFairsRoute,
+  ContactRoute: ContactRoute,
+  LibrarySetupRoute: LibrarySetupRoute,
+  ProductsRoute: ProductsRoute,
+  ServicesRoute: ServicesRoute,
+  SolutionsRoute: SolutionsRoute,
+  WhatWeOfferRoute: WhatWeOfferRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
