@@ -104,7 +104,7 @@ export function Footer() {
           <p className="text-xs text-primary-foreground/55">
             © {new Date().getFullYear()} Innovation Edge. All rights reserved.
           </p>
-          <div className="flex gap-3">
+         {/* <div className="flex gap-3">
             {[Facebook, Instagram, Linkedin, Youtube].map((Icon, i) => (
               <a
                 key={i}
@@ -115,7 +115,7 @@ export function Footer() {
                 <Icon className="h-4 w-4" />
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
