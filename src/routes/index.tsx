@@ -427,7 +427,7 @@ function Home() {
       </section>
 
       {/* VIDEO PLACEHOLDER */}
-      <section className="bg-surface py-20 sm:py-24">
+   {/** <section className="bg-surface py-20 sm:py-24">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Company Video"
@@ -446,7 +446,7 @@ function Home() {
           </Reveal>
         </div>
       </section>
-
+ */}  
       {/* FINAL CTA */}
       <section className="bg-primary py-16">
         <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">

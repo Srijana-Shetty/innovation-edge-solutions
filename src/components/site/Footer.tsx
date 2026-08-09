@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
-import logo from "@/assets/innovation-edge-logo.png.asset.json";
+import logo from "@/assets/innovation-edge-logo.jpeg";
 import { CONTACT } from "@/lib/site-content";
 
 const columns = [
@@ -31,7 +31,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <img
-              src={logo.url}
+              src={logo}
               alt="Innovation Edge logo"
               width={140}
               height={140}

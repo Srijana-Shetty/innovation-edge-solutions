@@ -94,7 +94,12 @@ function Contact() {
                 { icon: Mail, label: "Email", value: CONTACT.email, href: `mailto:${CONTACT.email}` },
                 { icon: Phone, label: "Phone", value: CONTACT.phone, href: `tel:${CONTACT.phone.replace(/\s/g, "")}` },
                 { icon: MessageCircle, label: "WhatsApp", value: CONTACT.whatsapp, href: `https://wa.me/${CONTACT.whatsapp}` },
-                { icon: MapPin, label: "Address", value: CONTACT.address, href: undefined },
+               {
+  icon: MapPin,
+  label: "Address",
+  value: CONTACT.address,
+  href: CONTACT.mapUrl,
+},
               ].map((item) => (
                 <li
                   key={item.label}
@@ -122,15 +127,17 @@ function Contact() {
               ))}
             </ul>
 
-            <div className="mt-8 overflow-hidden rounded-xl border border-border shadow-card">
-              <iframe
-                title="Innovation Edge location map"
-                src="https://www.google.com/maps?q=education&output=embed"
-                loading="lazy"
-                className="h-64 w-full border-0"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+           <div className="mt-8 overflow-hidden rounded-xl border border-border shadow-card">
+  <iframe
+    title="Innovation Edge location"
+    src="https://www.google.com/maps?q=Innovation%20Edges%2C%20Building%20No%202990%2C%20Al%20Radha%2C%20Al%20Fayah%20Dist%2C%20Saudi%20Arabia&output=embed"
+    loading="lazy"
+    className="h-64 w-full border-0"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
+
+
             <p className="mt-2 text-xs text-muted-foreground">
               Map placeholder — will be centred on the confirmed business address.
             </p>

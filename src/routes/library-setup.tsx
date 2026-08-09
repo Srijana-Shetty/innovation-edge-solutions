@@ -84,16 +84,16 @@ function LibrarySetup() {
         </div>
       </section>
 
-      <section className="bg-surface py-16">
+    {/**<section className="bg-surface py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <Reveal className="rounded-xl border border-dashed border-primary/25 bg-card p-6 text-center">
-            <p className="text-sm text-muted-foreground">
+           <p className="text-sm text-muted-foreground">
               Content placeholder — specific library setup capabilities, timelines and
               deliverables will be published once confirmed by Innovation Edge.
-            </p>
+            </p>  
           </Reveal>
         </div>
-      </section>
+      </section> */}  
     </SiteLayout>
   );
 }

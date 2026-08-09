@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/innovation-edge-logo.png.asset.json";
+import logo from "@/assets/innovation-edge-logo.jpeg";
 import { cn } from "@/lib/utils";
 
 export function Logo({
@@ -18,7 +18,7 @@ export function Logo({
       className={cn("flex shrink-0 items-center gap-3", className)}
     >
       <img
-        src={logo.url}
+        src={logo}
         alt="Innovation Edge logo"
         width={96}
         height={96}

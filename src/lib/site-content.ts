@@ -6,14 +6,24 @@
 export const CONTACT = {
   company: "Innovation Edge",
   tagline: "Empowering Education",
+
   /* PLACEHOLDER — replace with the client's confirmed business email */
   email: "info@example.com",
+
   /* PLACEHOLDER — replace with the client's confirmed phone number */
-  phone: "+00 00000 00000",
-  /* PLACEHOLDER — replace with the client's confirmed WhatsApp number (digits only) */
-  whatsapp: "0000000000",
+  phone: "+966 58 177 7125",
+
+  /* PLACEHOLDER — replace with the client's confirmed WhatsApp number */
+  whatsapp: "+966 58 177 7125",
+
   /* PLACEHOLDER — replace with the client's confirmed address */
-  address: "Address to be provided by Innovation Edge",
+  address:
+    "Innovation Edges, Building No 2990, Al Radha, Al Fayah Dist. Kingdom of Saudi Arabia",
+
+  /* Google Maps location */
+  mapUrl:
+    "https://www.google.com/maps/search/?api=1&query=Innovation+Edges,+Building+No+2990,+Al+Radha,+Al+Fayah+Dist,+Kingdom+of+Saudi+Arabia",
+
   hours: "Business hours to be confirmed",
 } as const;
 

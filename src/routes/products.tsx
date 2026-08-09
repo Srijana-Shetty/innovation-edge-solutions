@@ -116,13 +116,13 @@ function Products() {
               </Reveal>
             ))}
           </div>
-          <Reveal className="mt-12 rounded-xl border border-dashed border-primary/25 bg-primary-soft p-6 text-center">
+         {/* <Reveal className="mt-12 rounded-xl border border-dashed border-primary/25 bg-primary-soft p-6 text-center">
             <p className="text-sm font-medium text-primary">
               Product listings placeholder — titles, specifications and pricing will be added
               once the product data is supplied. This structure can be extended into a full
               online catalogue later.
             </p>
-          </Reveal>
+          </Reveal>*/} 
           <Reveal className="mt-10 text-center">
             <CtaLink to="/contact">Request Product Details</CtaLink>
           </Reveal>
