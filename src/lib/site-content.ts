@@ -8,7 +8,7 @@ export const CONTACT = {
   tagline: "Empowering Education",
 
   /* PLACEHOLDER — replace with the client's confirmed business email */
-  email: "info@example.com",
+  email: "info@innovationedges.org",
 
   /* PLACEHOLDER — replace with the client's confirmed phone number */
   phone: "+966 58 177 7125",
@@ -17,8 +17,7 @@ export const CONTACT = {
   whatsapp: "+966 58 177 7125",
 
   /* PLACEHOLDER — replace with the client's confirmed address */
-  address:
-    "Innovation Edges, Building No 2990, Al Radha, Al Fayah Dist. Kingdom of Saudi Arabia",
+  address: "Innovation Edges, Building No 2990, Al Radha, Al Fayah Dist. Kingdom of Saudi Arabia",
 
   /* Google Maps location */
   mapUrl:
